@@ -93,17 +93,17 @@ const KnowledgeList = () => {
               </>
             ) : (
               <>
-                <ListItemText primary={item.title} sx={{ maxWidth: '700px' }}/>
+                <ListItemText primary={item.title} sx={{ maxWidth: '700px'}}/>
 
                 <Box>
 
-                  <Button variant="outlined" color="primary" size="small" onClick={() => handleEdit(item)} sx={{ mr: 1 }}>
+                  <Button variant="outlined" color="primary" size="small" onClick={() => handleEdit(item)} sx={{ mr: 1, fontWeight: 700 }}>
                     
                     Edit
 
                   </Button>
 
-                  <Button variant="outlined" color="error" size="small"onClick={() => handleDelete(item.id)}>
+                  <Button variant="outlined" color="error" size="small"onClick={() => handleDelete(item.id)} sx={{ fontWeight: 700 }}>
     
                     Delete
     

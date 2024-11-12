@@ -3,26 +3,32 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navbar from './components/Common/Navbar';
 import ExpertDashboard from './components/Expert/ExpertDashboard';
 import UserDashboard from './components/User/UserDashboard';
+import './App.css';
 
 function App() {
 
   return (
 
-    <Router>
+    <div className="App">
 
-      <Navbar />
+      <Router>
 
-      <Routes>
+        <Navbar />
 
-        <Route path="/" element={<Navigate to="/expert" />} />
+          <Routes>
 
-        <Route path="/expert/*" element={<ExpertDashboard />} />
+            <Route path="/" element={<Navigate to="/expert" />} />
 
-        <Route path="/user" element={<UserDashboard />} />
+            <Route path="/expert/*" element={<ExpertDashboard />} />
 
-      </Routes>
+            <Route path="/user" element={<UserDashboard />} />
 
-    </Router>
+          </Routes>
+
+      </Router>
+
+    </div>
+    
   );
 }
 
